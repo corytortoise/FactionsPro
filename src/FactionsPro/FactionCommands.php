@@ -1140,9 +1140,6 @@ class FactionCommands {
                     ////////////////////////////// CHAT ////////////////////////////////
                     if (strtolower($args[0]) == "chat" or strtolower($args[0]) == "c") {
                         
-                        $sender->sendMessage($this->plugin->formatMessage("Faction chat disabled", false));
-                        return true;
-                        
                         if ($this->plugin->isInFaction($player)) {
                             if (isset($this->plugin->factionChatActive[$player])) {
                                 unset($this->plugin->factionChatActive[$player]);
@@ -1159,9 +1156,6 @@ class FactionCommands {
                         }
                     }
                     if (strtolower($args[0]) == "allychat" or strtolower($args[0]) == "ac") {
-                        
-                        $sender->sendMessage($this->plugin->formatMessage("Faction chat disabled", false));
-                        return true;
                         
                         if ($this->plugin->isInFaction($player)) {
                             if (isset($this->plugin->allyChatActive[$player])) {
